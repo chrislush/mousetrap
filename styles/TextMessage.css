@@ -1,0 +1,58 @@
+:root {
+    --parchment: #fcf5e5;
+}
+
+.TextMessage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.TextMessage img {
+    position: absolute;
+    bottom: 116px;
+    left: 32px;
+    width: 16%;
+    image-rendering: pixelated;
+}
+
+.text-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 116px;
+    padding: 15px;
+    background-color: var(--parchment);
+    border: 3px solid black;
+    border-radius: 15px 15px 0 0;
+    color: black;
+}
+
+.TextMessage_p {
+    margin: 0;
+    font-size: 40px;
+    font-family: 'Special Elite';
+}
+
+.TextMessage span {
+    opacity: 0;
+}
+
+.TextMessage span.revealed {
+    opacity: 1;
+}
+
+.TextMessage_button {
+    margin: 0;
+    font-size: 30px;
+    padding: 0;
+    background: none;
+    border: none;
+    font-family: "Special Elite";
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    bottom: 8px;
+}

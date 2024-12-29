@@ -1,0 +1,184 @@
+:root {
+    --lightgold: #fff5bd;
+    --gold: #eac25c;
+}
+
+.Puzzle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url(../images/puzzlebackground.png);
+    font-family: "Poiret One";
+    padding: 15px 15px;
+}
+
+.puzzle-container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 
+      [wide-start]  15px 
+      [mid-start]   15px 
+      [tall-start]  1fr 
+      [tall-end]    15px 
+      [mid-end]     15px 
+      [wide-end] 
+    ;
+    grid-template-rows: 
+      [tall-start]  15px 
+      [mid-start]   15px 
+      [wide-start]  1fr 
+      [wide-end]    15px 
+      [mid-end]     15px 
+      [tall-end] 
+    ;
+}
+
+.puzzle-container .tall {
+    grid-area: tall;
+    border: 2px solid var(--gold);
+}
+  
+.puzzle-container .mid {
+    grid-area: mid;
+    border: 2px solid var(--gold);
+}
+  
+.puzzle-container .wide {
+    grid-area: wide;
+    border: 2px solid var(--gold);
+}  
+
+.puzzle-container .content {
+    grid-column: tall-start / tall-end;
+    grid-row: wide-start / wide-end;
+    padding: 0;
+    color: var(--gold);
+}
+
+.puzzle-container .content h1 {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.puzzle-container .content sup {
+    text-decoration: underline;
+}
+
+.puzzle-container .content .puzzle-description {
+    width: 95%;
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -15px;
+}
+
+.puzzle-container .content .puzzle-description p {
+    margin: 10px auto 0;
+}
+
+.puzzle-container .content img {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    image-rendering: pixelated;
+    width: 116px;
+}
+
+#puzzle-3, #puzzle-4{
+    font-size: 25px;
+}
+
+#puzzle-3, #puzzle-4 > p {
+    margin: 15px auto 0;
+}
+
+.puzzle-container .content .answer-div {
+    width: 55%;
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle-container .content .answer-div label {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.puzzle-container .content .answer-div .answer-input-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.answer-input, #answer-input {
+    width: 65px;
+    height: 50px;
+    font-family: "Poiret One";
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0%;
+    border-color: var(--gold);
+    outline: none;
+    background-color: var(--lightgold);
+}
+
+.answer-input {
+    margin: 0 7px 10px;
+}
+
+#answer-input {
+    margin-bottom: 10px;
+}
+
+.options-div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.options-div button {
+    margin: 5px;
+    width: 200px;
+    height: 50px;
+    font-family: "Poiret One";
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--gold);
+    background-color: black;
+    border: 2px solid var(--gold);
+    margin-bottom: 10px;
+}
+
+.options-div button:hover {
+    background-color: var(--gold);
+    color: black;
+}
+
+#result {
+    font-size: 150px;
+    margin-top: 60px;
+    margin-bottom: 0;
+}
+
+#message {
+    font-size: 50px;
+    margin: 30px auto 60px;
+    text-align: center;
+}

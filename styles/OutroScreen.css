@@ -1,0 +1,100 @@
+.OutroScreen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 0;
+    animation: outro-screen-fade-in 3s forwards;
+    font-family: "Special Elite";
+    color: white;
+}
+
+.OutroScreen .ending-message-container {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.OutroScreen .ending-message-container .ending-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    font-size: 60px;
+}
+
+.OutroScreen .ending-message-container span {
+    opacity: 0;
+}
+
+.OutroScreen .ending-message-container span.revealed {
+    opacity: 1;
+}
+
+.OutroScreen .continue {
+    position: absolute;
+    bottom: -43px;
+    right: 20px;
+    font-size: 50px;
+    opacity: 0;
+}
+
+.OutroScreen .continue.fade-in {
+    animation: outro-screen-fade-in 2s forwards;
+}
+
+.OutroScreen.fade-out {
+    animation: outro-screen-fade-out 2s forwards;
+}
+
+.OutroScreen .ending-message-container.fade-out {
+    animation: outro-screen-fade-out 2s forwards;
+}
+
+.OutroScreen .continue.fade-out {
+    animation: outro-screen-fade-out 2s forwards;
+}
+
+.Credits {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: "Special Elite";
+    color: white;
+    opacity: 0;
+}
+
+.Credits .credits-container {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 45%;
+}
+
+.Credits .credits-container .attribution {
+    font-size: 22px;
+    text-align: left;
+}
+
+.Credits .credits-container .thank-you {
+    font-size: 30px;
+    text-align: left;
+}
+
+.Credits.fade-in {
+    animation: outro-screen-fade-in 2s forwards;
+}
+
+@keyframes outro-screen-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes outro-screen-fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}

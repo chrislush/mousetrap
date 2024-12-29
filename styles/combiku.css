@@ -1,0 +1,66 @@
+:root {
+    --lightgold: #fff5bd;
+    --gold: #eac25c;
+    --mediumgold: #bb9b49;;
+}
+
+.combiku-board {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -52%);
+    width: 304px;
+    height: 304px;
+    background-color: var(--lightgold);
+    border: 2px solid var(--gold);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.combiku-board .tile {
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--gold);
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--mediumgold);
+    user-select: none;
+    cursor: default;
+}
+
+.square {
+    background-image: url(../images/square.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.circle {
+    background-image: url(../images/circle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.diamond {
+    background-image: url(../images/diamond.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.star {
+    background-image: url(../images/star.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hexagon {
+    background-image: url(../images/hexagon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
