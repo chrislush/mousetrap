@@ -11,7 +11,10 @@ class Scene {
 
         let cameraPerson;
         if (this.map.hasCameraPerson) {
-            cameraPerson = this.map.gameObjects.tom; 
+            cameraPerson = {
+                x: this.map.gameObjects.tom.x - 16,
+                y: this.map.gameObjects.tom.y - 48
+            }
         } else {
             cameraPerson = {
                 x: toolbox.withGrid(12.5),
